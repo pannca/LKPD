@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let beratBuahJerukKg = parseFloat(prompt("Masukkan berat buah jeruk (kilogram):"));
+
+let beratBuahJerukGram = beratBuahJerukKg * 1000;
+let hargaPerKg = 500;
+
+let totalHargaSebelumDiskon = beratBuahJerukGram * (hargaPerKg / 100)
+let diskon = 0.05 * totalHargaSebelumDiskon;
+let totalHargaSetelahDiskon = totalHargaSebelumDiskon - diskon;
+
+console.log("Total Harga Sebelum Diskon: " + totalHargaSebelumDiskon + " rupiah");
+console.log("Diskon: " + diskon + " rupiah");
+console.log("Total Harga Setelah Diskon: " + totalHargaSetelahDiskon + " rupiah");
+    </script>
+</body>
+</html>
