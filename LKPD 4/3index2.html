@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let kode = prompt("Masukkan kode pegawai:");
+
+        // Mendapatkan digit-digit yang membentuk kode pegawai
+        let golongan = parseInt(kode[0]);
+        let tanggal_lahir = kode.slice(1, 11);
+        let nomorUrut = parseInt(kode.slice(9, 11));
+
+        // Mendapatkan nama bulan berdasarkan digit bulan pada tanggal lahir
+        let digitbulan = parseInt(tanggal_lahir.slice(2, 4));
+        const bulanList = ["", "JAN", "FEB", "MAR", "APR", "MEI", "JUN", "JUL", "AGU", "SEP", "OKT", "NOV", "DES"];
+        let bulan = bulanList[digitbulan] || "UNKNOWN";
+
+        // Menampilkan informasi pegawai
+        console.log("Nomor Golongan: " + golongan);
+        console.log("Tanggal Lahir: " + `${tanggal_lahir.slice(0, 2)} ${ bulan } ${ tanggal_lahir.slice(4, 8) }`);
+        console.log("Nomor Urut Pegawai: " + nomorUrut);
+    </script>
+</body>
+
+</html>

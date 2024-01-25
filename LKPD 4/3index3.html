@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let waktuAwal = "02:13:25";
+        let [jam, menit, detik] = waktuAwal.split(":").map(Number);
+
+        let totalDetik = jam * 3600 + menit * 60 + detik + 1;
+
+        jam = totalDetik >= 3600 ? Math.floor(totalDetik / 3600) : "0";
+        menit = totalDetik >= 60 ? Math.floor((totalDetik % 3600) / 60) : "0";
+        detik = totalDetik % 60;
+
+        jam = jam < 10 ? "0" + jam : jam;
+        menit = menit < 10 ? "0" + menit : menit;
+        detik = detik < 10 ? "0" + detik : detik;
+
+        let waktuSetelahTambah = `${jam}: ${ menit }: ${ detik }    `;
+
+        console.log("Data Waktu Awal: " + waktuAwal);
+        console.log("Setelah Ditambah 1 Detik: " + waktuSetelahTambah);
+    </script>
+</body>
+
+</html>
