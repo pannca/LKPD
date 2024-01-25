@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nilaiPABP = 78;
+        let nilaiMatematika = 82;
+        let nilaiDPK = 77;
+
+        let ratarata = (nilaiPABP + nilaiMatematika + nilaiDPK) / 3;
+
+        let grade;
+        if (ratarata >= 80 && ratarata <= 100) {
+            grade = 'A';
+        } else if (ratarata >= 75 && ratarata < 80) {
+            grade = 'B';
+        } else if (ratarata >= 65 && ratarata < 75) {
+            grade = 'C';
+        } else if (ratarata >= 45 && ratarata < 65) {
+            grade = 'D';
+        } else if (ratarata >= 0 && ratarata < 45) {
+            grade = 'E';
+        } else {
+            grade = 'K';
+        }
+
+        console.log("Rata-rata Nilai: " + ratarata.toFixed(2));
+        console.log("Grade: " + grade);
+    </script>
+</body>
+</html>
